@@ -37,3 +37,12 @@ Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 ```sql
 SELECT COUNT(*) FROM `teachers` WHERE `teachers`.`phone` IS NULL;
 ```
+
+GROUP BY:
+Contare quanti iscritti ci sono stati ogni anno
+```sql
+
+```
+Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+Calcolare la media dei voti di ogni appello d'esame
+Contare quanti corsi di laurea ci sono per ogni dipartimento
