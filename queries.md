@@ -108,14 +108,13 @@ JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id`;
 ```
 Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
 ```sql
-SELECT `teachers`.`id`, `teachers`.`name`, `teachers`.`surname`, `departments`.`name`
+SELECT DISTINCT `teachers`.`id`, `teachers`.`name`, `teachers`.`surname`, `departments`.`name`
 FROM `teachers`
 JOIN `course_teacher` ON `teachers`.`id` = `course_teacher`.`teacher_id`
 JOIN `courses` ON `course_teacher`.`course_id` = `courses`.`id`
 JOIN `degrees` ON `courses`.`degree_id` = `degrees`.`id`
 JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
 WHERE `departments`.`name` = "Dipartimento di Matematica"
-GROUP BY `teachers`.`id`;
 ```
 BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per superare ciascuno dei suoi esami
 ```sql
